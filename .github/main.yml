@@ -4,7 +4,7 @@ name: 'main'
 on:
   push:
     branches:
-        main
+      - main
   workflow_dispatch:
 
 jobs:
@@ -20,3 +20,5 @@ jobs:
         run: docker ps
       - name: Compose docker
         run: docker-compose up -d
+      - name: list docker container after
+        run: docker ps
